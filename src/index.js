@@ -18,20 +18,22 @@ console.log(Array.from(opp.gb.board.entries()));
 let coords = Array.from(you.gb.board.keys());
 
 function computersTurn() {
-  let pick = Math.floor(Math.random() * 100);
-  console.log(`pick is ${pick}`);
-  let entry = Array.from(you.gb.board.entries())[pick];
-  console.log(`entry is ${entry}`);
-  let coords = entry[0];
-  let status = entry[1];
   let attacked = false;
-  //if it's an Array & a ship OR if it's 'empty'
-  while (!attacked) {
+  do {
+    let pick = Math.floor(Math.random() * 100);
+    console.log(`pick is ${pick}`);
+    let entry = Array.from(you.gb.board.entries())[pick];
+    console.log(`entry is ${entry}`);
+    let coords = entry[0];
+    let status = entry[1];
+
+    //if it's an Array & a ship OR if it's 'empty'
+
     if ((Array.isArray(status) && status[0] == "ship") || status == "empty") {
       you.gb.receiveAttack(coords);
       attacked = true;
     }
-  }
+  } while (!attacked);
 }
 
 function displayYourBoard(arr) {
@@ -90,7 +92,7 @@ function displayYourBoard(arr) {
     } else if (Array.isArray(arr[i]) && arr[i][0] == "sunk") {
       newDiv.setAttribute(
         "style",
-        `background-color: red;
+        `background-color: #ec832c;
         background-img: url('./kittysvg.svg');
                       border-style: solid;
                       border-width: 1px;
@@ -164,7 +166,7 @@ function displayOppBoard(arr) {
     } else if (Array.isArray(arr[i]) && arr[i][0] == "sunk") {
       newDiv.setAttribute(
         "style",
-        `background-color: red;
+        `background-color: #ec832c;
         background-image: url('./kittysvg.svg');
                         border-style: solid;
                         border-width: 1px;
