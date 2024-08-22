@@ -1,0 +1,120 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: pink;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 5% 45% 5% 45%;
+  grid-template-rows: 15% 70% 15%;
+  width: 80%;
+}
+
+.X-axis-letters.two {
+  grid-row: 1/2;
+  grid-column: 4/5;
+}
+
+.X-axis-letters {
+  grid-row: 1/ 2;
+  grid-column: 2 / 3;
+  display: flex;
+  /* border-style: solid; */
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: 270px;
+}
+
+.letter {
+  width: 27px;
+  /* background-color: grey; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Y-axis-numbers.two {
+  grid-row: 2/3;
+  grid-column: 3 / 4;
+}
+.Y-axis-numbers {
+  /* background-color: bisque; */
+  grid-row: 2/3;
+  grid-column: 1/2;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center;*/
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  height: 270px;
+}
+
+.number {
+  /* background-color: pink; */
+  padding: 0px;
+  margin: 0px;
+  height: 27px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid.opp {
+  grid-row: 2 / 3;
+  grid-column: 4 / 5;
+  background-color: white;
+}
+
+.grid {
+  /* border-style: solid;
+  border-color: black; */
+  background-color: white;
+  width: 270px;
+  height: 270px;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+  grid-row: 2/3;
+  grid-column: 2 / 3;
+}
+
+.label.opp {
+  grid-column: 2 /3;
+  grid-row: 4 /5;
+}
+
+.label.you {
+  grid-column: 4 /5;
+  grid-row: 4 /5;
+}
+
+/* .empty .hit .ship .miss {
+  background-color: white;
+  border-style: dotted;
+  border-width: 1px;
+  border-color: black;
+  width: 25px;
+  height: 25px;
+  padding: 0px;
+  margin: 0px;
+} */
+
+/* .hit {
+  background-image: url("./images/kittysvg.svg");
+}
+
+/* .miss {
+} */
+
+/* .ship {
+  background-image: url("./images/kittysvg.svg");
+} */

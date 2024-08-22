@@ -4,10 +4,12 @@
     "@babel/preset-env": "^7.25.3",
     "babel-jest": "^29.7.0",
     "css-loader": "^7.1.2",
+    "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.0",
     "jest": "^29.7.0",
     "style-loader": "^4.0.0",
-    "webpack": "^5.93.0"
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4"
   },
   "name": "battleship",
   "version": "1.0.0",
@@ -270,7 +272,8 @@
     "yocto-queue": "^0.1.0"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "webpack"
   },
   "author": "",
   "license": "ISC",
