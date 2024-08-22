@@ -8,9 +8,11 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: 5% 45% 5% 45%;
+  grid-template-columns: 10% 40% 10% 40%;
   grid-template-rows: 15% 70% 15%;
-  width: 80%;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
 }
 
 .X-axis-letters.two {
@@ -47,10 +49,11 @@ body {
   display: flex;
   flex-direction: column;
   /* align-items: center;*/
-  justify-content: center;
-  justify-items: center;
-  align-items: center;
+  justify-content: flex-end;
+  justify-items: flex-end;
+  align-items: flex-end;
   height: 270px;
+  margin-right: 10px;
 }
 
 .number {

@@ -5,6 +5,7 @@ import "./style.css";
 const oppGrid = document.querySelector(".grid.opp");
 const youGrid = document.querySelector(".grid.you");
 const dialog = document.querySelector("dialog");
+const butt = document.querySelector("button");
 
 let you = Player(false);
 let opp = Player(true);
