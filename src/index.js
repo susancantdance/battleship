@@ -4,6 +4,7 @@ import "./style.css";
 
 const oppGrid = document.querySelector(".grid.opp");
 const youGrid = document.querySelector(".grid.you");
+const dialog = document.querySelector("dialog");
 
 let you = Player(false);
 let opp = Player(true);
@@ -89,10 +90,11 @@ function displayYourBoard(arr) {
     } else if (Array.isArray(arr[i]) && arr[i][0] == "sunk") {
       newDiv.setAttribute(
         "style",
-        `background-color: red;
+        `background-color: white;
+        background-img: url('./kittysvg.svg');
                       border-style: solid;
                       border-width: 1px;
-                      border-color: orange;
+                      border-color: red;
                       width: 25px;
                       height: 25px;
                       padding: 0px;
@@ -163,6 +165,7 @@ function displayOppBoard(arr) {
       newDiv.setAttribute(
         "style",
         `background-color: red;
+        background-image: url('./kittysvg.svg');
                         border-style: solid;
                         border-width: 1px;
                         border-color: orange;
@@ -179,13 +182,16 @@ function displayOppBoard(arr) {
       console.log(opp.gb.board);
       oppGrid.textContent = "";
       displayOppBoard(Array.from(opp.gb.board.values()));
+
+      computersTurn();
+      oppGrid.textContent = "";
+      displayOppBoard(Array.from(opp.gb.board.values()));
+      dialog.showModal();
       setTimeout(() => {
-        computersTurn();
-        oppGrid.textContent = "";
-        displayOppBoard(Array.from(opp.gb.board.values()));
-        youGrid.textContent = "";
-        displayYourBoard(Array.from(you.gb.board.values()));
-      }, 1500);
+        dialog.close();
+      }, 750);
+      youGrid.textContent = "";
+      displayYourBoard(Array.from(you.gb.board.values()));
     });
 
     oppGrid.appendChild(newDiv);

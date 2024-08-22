@@ -97,6 +97,11 @@ body {
   grid-row: 4 /5;
 }
 
+dialog {
+  width: 600px;
+  text-align: center;
+}
+
 /* .empty .hit .ship .miss {
   background-color: white;
   border-style: dotted;
