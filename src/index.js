@@ -90,7 +90,7 @@ function displayYourBoard(arr) {
     } else if (Array.isArray(arr[i]) && arr[i][0] == "sunk") {
       newDiv.setAttribute(
         "style",
-        `background-color: white;
+        `background-color: red;
         background-img: url('./kittysvg.svg');
                       border-style: solid;
                       border-width: 1px;
