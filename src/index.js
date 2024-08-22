@@ -57,6 +57,7 @@ function displayYourBoard(arr) {
       newDiv.setAttribute(
         "style",
         `background-color: orange;
+        background-image: url('./kittysvg.svg');
                     border-style: solid;
                     border-width: 1px;
                     border-color: orange;
@@ -69,6 +70,7 @@ function displayYourBoard(arr) {
       newDiv.setAttribute(
         "style",
         `background-color: red;
+        background-image: url('./paw.svg');
                     border-style: solid;
                     border-width: 1px;
                     border-color: orange;
@@ -92,7 +94,7 @@ function displayYourBoard(arr) {
     } else if (Array.isArray(arr[i]) && arr[i][0] == "sunk") {
       newDiv.setAttribute(
         "style",
-        `background-color: #ec832c;
+        `background-color: red;
         background-img: url('./kittysvg.svg');
                       border-style: solid;
                       border-width: 1px;
@@ -166,11 +168,11 @@ function displayOppBoard(arr) {
     } else if (Array.isArray(arr[i]) && arr[i][0] == "sunk") {
       newDiv.setAttribute(
         "style",
-        `background-color: #ec832c;
+        `background-color: red;
         background-image: url('./kittysvg.svg');
                         border-style: solid;
                         border-width: 1px;
-                        border-color: orange;
+                        border-color: red;
                         width: 25px;
                         height: 25px;
                         padding: 0px;
